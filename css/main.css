@@ -17,15 +17,16 @@ body {
       text-align: center;
       font-size: 60px;
       text-shadow: 0px 0px 6px red; }
-  #superContainer #mainSection .cMaduro {
-    display: block;
-    margin: auto; }
-  #superContainer #mainSection .cGun {
-    margin: auto;
-    display: block;
-    position: absolute;
-    left: 30%;
-    top: 30%; }
+  #superContainer #mainSection {
+    pointer-events: none;
+    user-select: none; }
+    #superContainer #mainSection .cMaduro {
+      display: block;
+      margin: auto; }
+    #superContainer #mainSection .cGun {
+      margin: auto;
+      display: block;
+      position: absolute; }
 
 .hole {
   position: absolute;
@@ -36,6 +37,7 @@ body {
   background-color: #222;
   color: #F1F1F1;
   padding: 10px;
-  text-align: center; }
+  text-align: center;
+  cursor: default; }
 
 /*# sourceMappingURL=main.css.map */

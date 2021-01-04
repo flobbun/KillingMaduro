@@ -1,5 +1,5 @@
 const mainSection = document.querySelector('#mainSection');
-const pistol = document.querySelector('.cGun');
+const cGun = document.querySelector('.cGun');
 
 // Sounds
 const pistol_sound = document.createElement('audio');
@@ -14,6 +14,8 @@ let gunOnHand = {
 };
 
 let canShoot = true;
+let mouseX = 0;
+let mouseY = 0;
 
 function shoot(gun){
     if(canShoot){
@@ -28,24 +30,20 @@ function shoot(gun){
 
 function summonHole(){
     let rNumber = Math.random() * 4;
-    let rPercentage = Math.random() * 30;
     rNumber = Math.round(rNumber);
-    
+
     const hole = document.createElement('img');
     hole.src = `../img/holes/hole-${rNumber}.png`;
+    hole.style.top = mouseY+'px';
+    hole.style.left = mouseX+'px';
+
     hole.classList.add('hole');
-    hole.style.top = rPercentage+'%';
-    hole.style.left = rPercentage+'%';
     mainSection.appendChild(hole);
     setTimeout(() => {
         mainSection.removeChild(hole);
     }, 3000);
 }
 
-// Mouse movement
-window.addEventListener("mousemove", ()=>{
-    
-});
 
 // Keyboard events //
 window.addEventListener("keydown", function (event) {
@@ -58,3 +56,10 @@ window.addEventListener('click', ()=>{
     shoot(gunOnHand.pistol);
 })
 
+// Mouse movement
+window.addEventListener("mousemove", (event)=>{
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+    cGun.style.left = mouseX+'px';
+    cGun.style.top = mouseY+'px';
+});
