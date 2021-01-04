@@ -1,0 +1,66 @@
+$primary: #F1F1F1;
+$secondary: #222;
+
+@mixin shadow {box-shadow: 2px 2px 8px 1px black;}
+
+body{
+    background-color: $secondary;
+    overflow-x: hidden;
+}
+
+#superContainer{
+    @include shadow();
+    cursor: none;
+    background-color: $secondary;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+
+    #mainHeader{
+        @include shadow();
+        background-color: $secondary;
+        padding: 10px;
+        h1{
+            text-align: center;
+            font-size: 60px;
+            text-shadow: 0px 0px 6px red;
+            
+        }
+    }
+
+
+
+    #mainSection{
+        .cMaduro{
+            display: block;
+            margin: auto;
+            img{
+
+            }
+        }
+    
+        .cGun{
+            margin: auto;
+            display: block;
+            position: absolute;
+            left: 30%;
+            top: 30%;
+            img{
+            }
+        }
+    }
+    
+}
+
+.hole{
+    position: absolute;
+    width: 50%;
+}
+
+#mainFooter{
+    @include shadow();
+    background-color: $secondary;
+    color: $primary;
+    padding: 10px;
+    text-align: center;
+}
