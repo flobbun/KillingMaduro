@@ -11,6 +11,8 @@ body {
   background-position: center; }
   #superContainer #mainHeader {
     box-shadow: 2px 2px 8px 1px black;
+    pointer-events: none;
+    user-select: none;
     background-color: #222;
     padding: 10px; }
     #superContainer #mainHeader h1 {

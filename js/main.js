@@ -34,8 +34,8 @@ function summonHole(){
 
     const hole = document.createElement('img');
     hole.src = `../img/holes/hole-${rNumber}.png`;
-    hole.style.top = mouseY+'px';
-    hole.style.left = mouseX+'px';
+    hole.style.top = mouseY-100+'px';
+    hole.style.left = mouseX-150+'px';
 
     hole.classList.add('hole');
     mainSection.appendChild(hole);

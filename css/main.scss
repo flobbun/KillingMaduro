@@ -18,6 +18,8 @@ body{
 
     #mainHeader{
         @include shadow();
+        pointer-events: none;
+        user-select: none;
         background-color: $secondary;
         padding: 10px;
         h1{
