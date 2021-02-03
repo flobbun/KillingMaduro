@@ -2,8 +2,18 @@ body {
   background-color: #222;
   overflow-x: hidden; }
 
+body::-webkit-scrollbar {
+  width: 7px;
+  background: #111; }
+
+body::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 20px;
+  border: 1px solid #111; }
+
 #superContainer {
   box-shadow: 2px 2px 8px 1px black;
+  overflow: hidden;
   cursor: none;
   background-color: #222;
   background-repeat: no-repeat;
@@ -21,7 +31,8 @@ body {
       text-shadow: 0px 0px 6px red; }
   #superContainer #mainSection {
     pointer-events: none;
-    user-select: none; }
+    user-select: none;
+    overflow: hidden; }
     #superContainer #mainSection .cMaduro {
       display: block;
       margin: auto; }
@@ -32,7 +43,8 @@ body {
 
 .hole {
   position: absolute;
-  width: 50%; }
+  width: 44%;
+  opacity: 95%; }
 
 #mainFooter {
   box-shadow: 2px 2px 8px 1px black;
